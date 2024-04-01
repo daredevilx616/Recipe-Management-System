@@ -19,7 +19,8 @@ with app.app_context():
 
 @app.route("/")
 def home():
-    return "Welcome to the Recipe Management System!"
+    # return "Welcome to the Recipe Management System!"
+    return render_template("base.html")
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
