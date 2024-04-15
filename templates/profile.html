@@ -1,0 +1,13 @@
+<!-- profile.html -->
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>User Profile</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" value="{{ user.Username }}" disabled>
+        <!-- Add more fields as necessary -->
+        <input type="submit" value="Update Profile">
+    </form>
+{% endblock %}

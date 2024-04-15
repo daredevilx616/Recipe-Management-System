@@ -1,58 +1,134 @@
-/* style.css */
+/* General body styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
+/* Container styling */
 .container {
-    width: 80%;
+    max-width: 1200px;
     margin: auto;
-    overflow: hidden;
+    padding: 0 15px;
 }
 
+/* Header styling */
 header {
-    background: #50a3a2;
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #077187 1px solid;
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    border-bottom: #60a3bc 3px solid;
 }
 
 header a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
 
-form {
-    margin-top: 20px;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
+/* Navigation bar styling */
+nav {
+    text-align: right;
+    padding: 0;
 }
 
-input[type="text"], input[type="email"], input[type="password"] {
-    width: 94%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block; /* for vertical alignment with the title */
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    padding: 10px 15px;
+    background: #60a3bc; /* Adjust the color to your preference */
+    border-radius: 4px;
+    color: white;
+    margin-left: 4px;
+    transition: background 0.3s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+nav ul li a:hover, nav ul li a.active {
+    background: #3c6382; /* Darker shade for hover state */
+    text-decoration: none;
+}
+
+/* Main content area styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f4f4f4;
+    margin-bottom: 5px;
     border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadows to lift elements */
 }
 
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button,
 input[type="submit"] {
     width: 100%;
-    background: #50a3a2;
-    color: #ffffff;
-    border: 0;
-    padding: 10px;
-    cursor: pointer;
+    padding: 15px;
+    margin-bottom: 15px;
     border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
-input[type="submit"]:hover {
-    background: #077187;
+input[type="submit"], button {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #4cae4c;
+}
+
+/* Responsive styling */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0;
+    }
+    header h1, nav {
+        text-align: center;
+    }
+    nav ul {
+        float: none;
+        padding: 0;
+    }
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        display: block;
+        margin: auto; /* Center buttons */
+        width: 80%; /* Set a fixed width for mobile */
+    }
+    /* Ensure that form elements are not too wide on mobile */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    button,
+    input[type="submit"] {
+        width: 100%;
+    }
 }

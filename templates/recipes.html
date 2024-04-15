@@ -1,7 +1,9 @@
 {% extends "base.html" %}
+
 {% block content %}
     <h1>Recipes</h1>
-    <ul>
+    <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchRecipes()">
+    <ul id="recipeList">
         {% for recipe in recipes %}
             <li>{{ recipe.Title }}</li>
         {% endfor %}
