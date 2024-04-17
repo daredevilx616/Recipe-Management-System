@@ -1,0 +1,302 @@
+[
+    {
+        "title": "Spaghetti Bolognese",
+        "instructions": "Cook spaghetti according to package instructions. In a separate pan, cook ground beef with onions, garlic, and tomato paste. Add canned tomatoes and simmer for 20 minutes. Season with salt, pepper, and Italian herbs. Serve sauce over cooked spaghetti and top with grated Parmesan cheese.",
+        "rating": 4.5,
+        "user_id": 1
+    },
+    {
+        "title": "Chicken Alfredo",
+        "instructions": "Cook fettuccine according to package instructions. In a separate pan, melt butter and add heavy cream. Simmer until thickened. Add grated Parmesan cheese and stir until smooth. Add cooked chicken and season with salt, pepper, and garlic powder. Serve sauce over cooked fettuccine.",
+        "rating": 4.7,
+        "user_id": 2
+    },
+    {
+        "title": "Beef Stroganoff",
+        "instructions": "Cook egg noodles according to package instructions. In a separate pan, cook sliced beef and onions. Add sliced mushrooms and cook until softened. Add sour cream and beef broth and simmer until thickened. Season with salt, pepper, and paprika. Serve sauce over cooked egg noodles.",
+        "rating": 4.6,
+        "user_id": 3
+    },
+    {
+        "title": "Vegetable Lasagna",
+        "instructions": "Preheat oven to 375°F. Cook lasagna noodles according to package instructions. In a separate pan, cook sliced zucchini, squash, and eggplant. In another pan, make a white sauce with butter, flour, and milk. Layer noodles, vegetables, and white sauce in a baking dish. Top with grated mozzarella cheese and bake for 25-30 minutes.",
+        "rating": 4.3,
+        "user_id": 4
+    },
+    {
+        "title": "Chicken Fajitas",
+        "instructions": "Slice chicken breast and bell peppers. In a pan, cook chicken with sliced onions and bell peppers. Season with fajita seasoning, salt, and pepper. Serve with warm tortillas, sour cream, and shredded cheese.",
+        "rating": 4.4,
+        "user_id": 5
+    },
+    {
+        "title": "Shrimp Scampi",
+        "instructions": "Cook pasta according to package instructions. In a separate pan, melt butter and add minced garlic. Add shrimp and cook until pink. Add white wine and lemon juice and simmer until reduced. Season with salt, pepper, and red pepper flakes. Serve sauce over cooked pasta.",
+        "rating": 4.6,
+        "user_id": 6
+    },
+    {
+        "title": "BBQ Ribs",
+        "instructions": "Preheat oven to 325°F. Season pork ribs with BBQ seasoning. Place ribs in a baking dish and cover with BBQ sauce. Cover with foil and bake for 2 hours. Remove foil and broil for 5-10 minutes until caramelized. Serve with extra BBQ sauce.",
+        "rating": 4.8,
+        "user_id": 7
+    },
+    {
+        "title": "Fish Tacos",
+        "instructions": "Season fish with chili powder, cumin, and salt. Cook in a pan until cooked through. Serve with warm tortillas, shredded cabbage, sliced avocado, and lime wedges.",
+        "rating": 4.5,
+        "user_id": 8
+    },
+    {
+        "title": "Meatball Sub",
+        "instructions": "Preheat oven to 375°F. Cook meatballs according to package instructions. Place meatballs on a sub roll and top with marinara sauce and shredded mozzarella cheese. Bake for 10-15 minutes until cheese is melted and bubbly.",
+"rating": 4.2,
+        "user_id": 9
+    },
+    {
+        "title": "BLT Sandwich",
+        "instructions": "Cook bacon until crispy. Toast bread and spread with mayonnaise. Layer bacon, lettuce, and sliced tomatoes. Serve with potato chips or a pickle.",
+        "rating": 4.3,
+        "user_id": 10
+    },
+    {
+        "title": "Grilled Cheese Sandwich",
+        "instructions": "Butter bread and place cheese in between. Grill in a pan until cheese is melted and bread is golden brown. Serve with tomato soup or a pickle.",
+        "rating": 4.1,
+        "user_id": 11
+    },
+    {
+        "title": "Clam Chowder",
+        "instructions": "In a pot, cook diced bacon until crispy. Add diced onions, celery, and garlic. Cook until softened. Add clam juice, diced potatoes, and heavy cream. Simmer until potatoes are tender. Add canned clams and season with salt, pepper, and thyme. Serve with oyster crackers or crusty bread.",
+        "rating": 4.4,
+        "user_id": 12
+    },
+    {
+        "title": "Chicken Noodle Soup",
+        "instructions": "In a pot, cook chopped onions and garlic in olive oil until softened. Add chicken broth, sliced carrots, and diced celery. Simmer until vegetables are tender. Add cooked chicken and egg noodles. Season with salt, pepper, and dried thyme. Serve with crusty bread.",
+        "rating": 4.5,
+        "user_id": 13
+    },
+    {
+        "title": "Beef Stew",
+        "instructions": "In a pot, cook chopped onions and garlic in olive oil until softened. Add beef broth, diced potatoes, sliced carrots, and diced celery. Add cubed beef and season with salt, pepper, and dried thyme. Simmer until beef is tender. Add frozen peas and cook for an additional 5 minutes. Serve with crusty bread or over mashed potatoes.",
+        "rating": 4.6,
+        "user_id": 14
+    },
+    {
+        "title": "Vegetable Soup",
+        "instructions": "In a pot, cook chopped onions and garlic in olive oil until softened. Add chicken or vegetable broth, sliced carrots, diced celery, and diced tomatoes. Add chopped kale, frozen peas, and canned beans. Season with salt, pepper, and dried oregano. Simmer until vegetables are tender. Serve with crusty bread or over rice.",
+        "rating": 4.3,
+        "user_id": 15
+    },
+    {
+        "title": "Chicken Pot Pie",
+        "instructions": "Preheat oven to 375°F. Cook chicken and vegetables (such as carrots, peas, and corn) in a pot until tender. Make a roux with butter and flour, then add milk and chicken broth. Add cooked chicken and vegetables and season with salt, pepper, and dried thyme. Pour mixture into a baking dish and top with pie crust. Bake for 25-30 minutes until crust is golden brown.",
+        "rating": 4.7,
+        "user_id": 16
+    },
+    {
+        "title": "Shepherd's Pie",
+        "instructions": "Preheat oven to 375°F. Cook ground beef and vegetables (such as carrots, peas, and corn) in a pan until cooked through. Make a roux with butter and flour, then add beef broth. Add cooked beef and vegetables and season with salt, pepper, and dried thyme. Transfer mixture to a baking dish and top with mashed potatoes. Bake for 25-30 minutes until potatoes are golden brown.",
+        "rating": 4.6,
+        "user_id": 17
+    },
+    {
+        "title": "Macaroni and Cheese",
+        "instructions": "Cook macaroni according to package instructions. Make a cheese sauce with butter, flour, milk, and shredded cheese. Combine cooked macaroni and cheese sauce and transfer to a baking dish. Top with additional shredded cheese and breadcrumbs. Bake for 20-25 minutes until cheese is melted and breadcrumbs are golden brown.",
+        "rating": 4.4,
+        "user_id": 18
+    },
+    {
+        "title": "Fried Rice",
+        "instructions": "Cook rice according to package instructions. In a pan, cook diced onions, garlic, and scrambled eggs. Add cooked rice, frozen peas and carrots, and soy sauce. Stir-fry until heated through. Serve with chopped green onions and additional soy sauce.",
+        "rating": 4.2,
+        "user_id": 19
+    },
+    {
+        "title": "Tuna Salad",
+        "instructions": "Mix canned tuna, diced celery, chopped onions, and mayonnaise. Season with salt, pepper, and dried dill. Serve on a bed of lettuce or on bread with sliced tomatoes and pickles.",
+        "rating": 4.1,
+        "user_id": 20
+    },
+    {
+        "title": "Egg Salad",
+        "instructions": "Mix boiled eggs, diced celery, chopped onions, and mayonnaise. Season with salt, pepper, and dried mustard. Serve on a bed of lettuce or on bread with sliced tomatoes and pickles.",
+        "rating": 4.2,
+        "user_id": 21
+    },
+    {
+        "title": "Chicken Salad",
+        "instructions": "Mix cooked chicken, diced celery, chopped onions, and mayonnaise. Season with salt, pepper, and dried tarragon. Serve on a bed of lettuce or on bread with sliced tomatoes and pickles.",
+        "rating": 4.4,
+        "user_id": 22
+    },
+    {
+        "title": "Potato Salad",
+        "instructions": "Boil potatoes until tender. Mix with diced celery, chopped onions, and mayonnaise. Season with salt, pepper, and dried mustard. Serve chilled.",
+        "rating": 4.3,
+        "user_id": 23
+    },
+    {
+        "title": "Pasta Salad",
+        "instructions": "Cook pasta according to package instructions. Mix with diced vegetables (such as bell peppers, cherry tomatoes, and cucumbers), and Italian dressing. Serve chilled.",
+        "rating": 4.2,
+        "user_id": 24
+    },
+    {
+        "title": "Coleslaw",
+        "instructions": "Mix shredded cabbage, shredded carrots, and mayonnaise. Season with salt, pepper, and dried mustard. Serve chilled.",
+        "rating": 4.1,
+        "user_id": 25
+    },
+    {
+        "title": "Baked Potato",
+        "instructions": "Preheat oven to 400°F. Pierce potatoes with a fork and bake for 45-60 minutes until tender. Serve with butter, sour cream, and chopped chives.",
+        "rating": 4.0,
+        "user_id": 26
+    },
+    {
+        "title": "Mashed Potatoes",
+        "instructions": "Boil potatoes until tender. Mash with butter, milk, and salt. Serve with gravy or as a side dish.",
+        "rating": 4.3,
+        "user_id": 27
+    },
+    {
+        "title": "French Fries",
+        "instructions": "Cut potatoes into fry shapes and soak in cold water for 30 minutes. Dry thoroughly and fry in oil until crispy. Serve with ketchup or mayo.",
+        "rating": 4.2,
+        "user_id": 28
+    },
+    {
+        "title": "Baked Sweet Potato",
+        "instructions": "Preheat oven to 400°F. Pierce sweet potatoes with a fork and bake for 45-60 minutes until tender. Serve with butter, cinnamon, and brown sugar.",
+        "rating": 4.4,
+        "user_id": 29
+    },
+    {
+        "title": "Roasted Vegetables",
+        "instructions": "Toss chopped vegetables (such as bell peppers, zucchini, and squash) with olive oil, salt, and pepper. Roast in the oven at 400°F for 20-25 minutes until tender. Serve as a side dish.",
+        "rating": 4.3,
+        "user_id": 30
+    },
+    {
+        "title": "Grilled Vegetables",
+        "instructions": "Brush chopped vegetables (such as bell peppers, zucchini, and squash) with olive oil and grill until tender. Serve as a side dish.",
+        "rating": 4.4,
+        "user_id": 31
+    },
+    {
+        "title": "Steamed Vegetables",
+        "instructions": "Steam chopped vegetables (such as broccoli, carrots, and cauliflower) until tender. Serve as a side dish.",
+        "rating": 4.2,
+        "user_id": 32
+    },
+    {
+        "title": "Sautéed Spinach",
+        "instructions": "Sauté chopped spinach in olive oil until wilted. Season with salt, pepper, and garlic powder. Serve as a side dish.",
+        "rating": 4.3,
+        "user_id": 33
+    },
+    {
+        "title": "Corn on the Cob",
+        "instructions": "Boil corn on the cob for 5-7 minutes until tender. Serve with butter and salt.",
+        "rating": 4.4,
+        "user_id": 34
+    },
+    {
+        "title": "Baked Beans",
+        "instructions": "Mix canned baked beans with diced onions, ketchup, and brown sugar. Bake in the oven at 350°F for 20-25 minutes until heated through. Serve as a side dish.",
+        "rating": 4.2,
+        "user_id": 35
+    },
+    {
+        "title": "Macaroni and Cheese Casserole",
+        "instructions": "Cook macaroni according to package instructions. Make a cheese sauce with butter, flour, milk, and shredded cheese. Combine cooked macaroni and cheese sauce and transfer to a baking dish. Top with additional shredded cheese and breadcrumbs. Bake for 20-25 minutes until cheese is melted and breadcrumbs are golden brown. Serve as a side dish.",
+        "rating": 4.5,
+        "user_id": 36
+    },
+    {
+        "title": "Stuffed Bell Peppers",
+        "instructions": "Cut off the tops of bell peppers and remove the seeds. Mix cooked rice, ground beef, diced onions, and tomato sauce. Stuff the bell peppers with the mixture and bake in the oven at 350°F for 25-30 minutes until tender. Serve as a main dish.",
+        "rating": 4.4,
+        "user_id": 37
+    },
+    {
+        "title": "Meatloaf",
+        "instructions": "Mix ground beef, diced onions, breadcrumbs, and ketchup. Form into a loaf and bake in the oven at 350°F for 45-60 minutes until cooked through. Serve with mashed potatoes and gravy.",
+        "rating": 4.6,
+        "user_id": 38
+    },
+    {
+        "title": "Baked Ziti",
+        "instructions": "Cook ziti according to package instructions. Make a tomato sauce with canned tomatoes, diced onions, and garlic. Combine cooked ziti and tomato sauce and transfer to a baking dish. Top with shredded mozzarella cheese and bake in the oven at 350°F for 20-25 minutes until cheese is melted and bubbly. Serve with a side salad.",
+        "rating": 4.5,
+        "user_id": 39
+    },
+    {
+        "title": "Lasagna",
+        "instructions": "Prepare lasagna noodles according to package instructions. Make a tomato sauce with canned tomatoes, diced onions, and garlic. Make a cheese sauce with butter, flour, milk, and shredded cheese. Layer noodles, tomato sauce, and cheese sauce in a baking dish. Top with shredded mozzarella cheese and bake in the oven at 350°F for 30-35 minutes until cheese is melted and bubbly. Serve with a side salad.",
+        "rating": 4.7,
+        "user_id": 40
+    },
+    {
+        "title": "Chili",
+        "instructions": "Cook ground beef and diced onions in a pot until cooked through. Add canned tomatoes, canned beans, and chili seasoning. Simmer for 20-25 minutes until heated through. Serve with shredded cheese, sour cream, and chopped onions.",
+        "rating": 4.4,
+        "user_id": 41
+    },
+    {
+        "title": "Gumbo",
+        "instructions": "Make a roux with flour and oil in a pot. Add diced onions, celery, and bell peppers. Cook until softened. Add chicken or sausage and cook until cooked through. Add chicken or vegetable broth and canned tomatoes. Simmer for 20-25 minutes until heated through. Serve over rice.",
+        "rating": 4.5,
+        "user_id": 42
+    },
+    {
+        "title": "Jambalaya",
+        "instructions": "Cook rice according to package instructions. In a separate pot, cook diced onions, celery, and bell peppers. Add chicken or sausage and cook until cooked through. Add canned tomatoes and chicken or vegetable broth. Simmer for 20-25 minutes until heated through. Combine cooked rice and tomato mixture. Serve with hot sauce.",
+        "rating": 4.6,
+        "user_id": 43
+    },
+    {
+        "title": "Paella",
+        "instructions": "Cook rice according to package instructions. In a separate pot, cook diced onions, garlic, and saffron. Add chicken or seafood and cook until cooked through. Add chicken or vegetable broth, canned tomatoes, and frozen peas. Simmer for 20-25 minutes until heated through. Combine cooked rice and tomato mixture. Serve with lemon wedges.",
+        "rating": 4.7,
+        "user_id": 44
+    },
+    {
+        "title": "Ratatouille",
+        "instructions": "Chop eggplant, zucchini, bell peppers, and tomatoes. In a pot, cook diced onions and garlic until softened. Add chopped vegetables and canned tomatoes. Simmer for 20-25 minutes until vegetables are tender. Serve with crusty bread.",
+        "rating": 4.4,
+        "user_id": 45
+    },
+    {
+        "title": "Stuffed Shells",
+        "instructions": "Cook jumbo pasta shells according to package instructions. Make a tomato sauce with canned tomatoes, diced onions, and garlic. Make a cheese filling with ricotta cheese, shredded mozzarella cheese, and grated Parmesan cheese. Stuff the pasta shells with the cheese filling and top with tomato sauce. Bake in the oven at 350°F for 20-25 minutes until heated through. Serve with a side salad.",
+        "rating": 4.5,
+        "user_id": 46
+    },
+    {
+        "title": "Pizza",
+        "instructions": "Preheat oven to 425°F. Roll out pizza dough and top with pizza sauce, shredded mozzarella cheese, and desired toppings. Bake for 12-15 minutes until cheese is melted and crust is golden brown. Serve with a side salad.",
+        "rating": 4.6,
+        "user_id": 47
+    },
+    {
+        "title": "Quiche",
+        "instructions": "Preheat oven to 375°F. Roll out pie crust and press into a pie dish. Mix eggs, heavy cream, and shredded cheese. Add diced vegetables (such as bell peppers, onions, and mushrooms) and cooked bacon or ham. Pour mixture into pie crust and bake for 30-35 minutes until set. Serve with a side salad.",
+        "rating": 4.4,
+        "user_id": 48
+    },
+    {
+        "title": "Strata",
+        "instructions": "Grease a baking dish. Layer cubed bread, shredded cheese, and cooked breakfast meat (such as bacon or sausage). Whisk eggs, milk, and seasonings together. Pour mixture over bread, cheese, and meat. Cover and refrigerate overnight. Bake in the oven at 350°F for 45-60 minutes until set. Serve with a side of fruit.",
+        "rating": 4.3,
+        "user_id": 49
+    },
+    {
+        "title": "Breakfast Burritos",
+        "instructions": "Scramble eggs and cook breakfast meat (such as bacon or sausage). Warm flour tortillas and fill with scrambled eggs, breakfast meat, shredded cheese, and diced vegetables (such as bell peppers and onions). Serve with salsa or sour cream.",
+        "rating": 4.2,
+        "user_id": 50
+    }
+]
