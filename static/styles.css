@@ -80,7 +80,8 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 button,
-input[type="submit"] {
+input[type="submit"],
+select { /* Select element styling */
     width: 100%;
     padding: 15px;
     margin-bottom: 15px;
@@ -128,7 +129,8 @@ input[type="submit"]:hover, button:hover {
     input[type="email"],
     input[type="password"],
     button,
-    input[type="submit"] {
+    input[type="submit"],
+    select { /* Select element styling */
         width: 100%;
     }
 }

@@ -40,7 +40,5 @@ class Interactions(db.Model):
     __table_args__ = (
         db.CheckConstraint('Rating BETWEEN 1 AND 5', name='rating_range_check'),
     )
-
-
     user = db.relationship('Users', backref=db.backref('interactions', lazy=True))
     recipe = db.relationship('Recipes', backref=db.backref('interactions', lazy=True))
