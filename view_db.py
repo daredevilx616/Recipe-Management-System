@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('C:/Users/Z08819/OneDrive - The Coca-Cola Company/Documents/Database/instance/recipe_management.db')
+conn = sqlite3.connect('recipe_management.db')
 cursor = conn.cursor()
 
 cursor.execute("""
