@@ -8,7 +8,7 @@
         {% for recipe in recipes %}
             <div class="recipe-item" onclick="toggleRecipeDetails('details-{{ recipe.recipe_id }}')">
                 <div class="recipe-content">
-                    <div class="recipe-title">{{ recipe.title }}</div>
+                    <div class="recipe-title" id="title-{{ recipe.recipe_id }}">{{ recipe.title }}</div>
                     <div class="recipe-details" id="details-{{ recipe.recipe_id }}" style="display: none;">
                         <p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
                         <p><strong>Ingredients:</strong> 
@@ -19,6 +19,9 @@
                     </div>
                 </div>
                 <div class="recipe-actions">
+                    <button type="button" class="btn btn-primary" onclick="editRecipe('{{ recipe.recipe_id }}')">
+                        Edit
+                    </button>                    
                     <form action="/delete_recipe/{{ recipe.recipe_id }}" method="post" onsubmit="return confirm('Are you sure you want to delete this recipe?');">
                         <button type="submit" class="btn btn-danger">
                             <i class="fas fa-trash"></i> Delete

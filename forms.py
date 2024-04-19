@@ -18,7 +18,7 @@ class LoginForm(FlaskForm):
 
 class RecipeForm(FlaskForm):
     title = StringField('Title', validators=[DataRequired()])
-    instructions = TextAreaField('Instructions', validators=[DataRequired()])
+    instructions = TextAreaField('Instructions', render_kw={'class': 'instructions-textarea'})
     ingredients = SelectMultipleField('Ingredients', choices=[], coerce=int)
     submit = SubmitField('Add Recipe')
     def __init__(self, *args, **kwargs):

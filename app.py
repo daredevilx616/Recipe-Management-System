@@ -147,6 +147,34 @@ def delete_ingredient():
     else:
         return jsonify({'message': 'Ingredient not found'}), 404
 
+@app.route('/update_recipe/<int:recipe_id>', methods=['POST'])
+def update_recipe(recipe_id):
+    recipe = Recipes.query.get(recipe_id)
+    if not recipe:
+        return jsonify({'error': 'Recipe not found'}), 404
+
+    data = request.get_json()
+    if 'title' in data:
+        recipe.title = data['title']
+    if 'instructions' in data:
+        recipe.instructions = data['instructions']
+    if 'ingredients' in data:
+        # Clear existing ingredients and add new ones
+        # This is simplistic; you might want to implement more nuanced ingredient handling
+        recipe.ingredients.clear()
+        for ingredient_name in data['ingredients']:
+            ingredient = Ingredients.query.filter_by(name=ingredient_name).first()
+            if ingredient:
+                recipe.ingredients.append(ingredient)
+            else:
+                # Create a new ingredient if it does not exist
+                new_ingredient = Ingredients(name=ingredient_name)
+                db.session.add(new_ingredient)
+                recipe.ingredients.append(new_ingredient)
+
+    db.session.commit()
+    return jsonify({'message': 'Recipe updated successfully'}), 200
+
 
 if __name__ == '__main__':
     app.run(debug=True)

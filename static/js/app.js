@@ -21,10 +21,14 @@ function toggleIngredientsSelection(toggle) {
 }
 
 function toggleRecipeDetails(detailsId) {
-    var details = document.getElementById(detailsId);
-    var display = details.style.display;
-    details.style.display = display === 'block' ? 'none' : 'block';
+    var detailsElement = document.getElementById(detailsId);
+    if (detailsElement.style.display === 'none') {
+        detailsElement.style.display = 'block';
+    } else {
+        detailsElement.style.display = 'none';
+    }
 }
+
 
 function addIngredient() {
     var nameField = document.getElementById('new_ingredient_name');
@@ -97,4 +101,60 @@ function deleteIngredient(ingredientId) {
     .catch((error) => {
         console.error('Error:', error);
     });
+}
+
+function editRecipe(recipeId) {
+    // Get the existing data
+    var title = document.querySelector(`#title-${recipeId}`).innerText;
+    var instructions = document.querySelector(`#details-${recipeId} p:first-child`).innerText;
+    var ingredients = document.querySelector(`#details-${recipeId} p:last-child span`).innerText;
+
+    // Convert recipe details to editable fields
+    document.getElementById(`details-${recipeId}`).innerHTML = `
+        <label>Title:</label>
+        <input type="text" id="edit-title-${recipeId}" value="${title}" onclick="event.stopPropagation();">
+        <label>Instructions:</label>
+        <textarea id="edit-instructions-${recipeId}" onclick="event.stopPropagation();">${instructions}</textarea>
+        <label>Ingredients:</label>
+        <textarea id="edit-ingredients-${recipeId}" onclick="event.stopPropagation();">${ingredients}</textarea>
+        <button onclick="saveRecipe(${recipeId})">Save</button>
+        <button onclick="cancelEdit(${recipeId})">Cancel</button>
+    `;
+}
+
+
+function saveRecipe(recipeId) {
+    // Get the updated data
+    var updatedTitle = document.getElementById('edit-title-' + recipeId).value;
+    var updatedInstructions = document.getElementById('edit-instructions-' + recipeId).value;
+    var updatedIngredients = document.getElementById('edit-ingredients-' + recipeId).value;
+
+    // Construct the payload
+    var payload = {
+        title: updatedTitle,
+        instructions: updatedInstructions,
+        ingredients: updatedIngredients.split(',').map(ingredient => ingredient.trim()) // Assuming you want an array of ingredients
+    };
+
+    // Send the update to the server
+    fetch('/update_recipe/' + recipeId, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload),
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Update the UI to show the saved changes or handle errors
+        console.log('Success:', data);
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
+}
+
+function cancelEdit(recipeId) {
+    // Reload the page or re-fetch the recipe details to cancel the edit
+    window.location.reload();
 }

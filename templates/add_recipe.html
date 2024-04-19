@@ -4,8 +4,8 @@
     <form method="POST" action="{{ url_for('add_recipe') }}">
         {{ form.hidden_tag() }}
         {{ form.title.label }} {{ form.title() }}
-        {{ form.instructions.label }} {{ form.instructions() }}
-        <fieldset id="ingredients-fieldset">
+        {{ form.instructions.label }} 
+        {{ form.instructions(class='instructions-textarea') }}        <fieldset id="ingredients-fieldset">
             <legend>Ingredients</legend>
             {% for ingredient_id, ingredient_name in form.ingredients.choices %}
                 <div class="ingredient-item" id="ingredient-{{ ingredient_id }}">
@@ -24,6 +24,9 @@
             <option value="Seasoning">Seasoning</option>
             <option value="Meat">Meat</option>
             <option value="Fruits">Fruits</option>
+            <option value="Oil">Oil</option>
+            <option value="Herb">Herb</option>
+            <option value="Grain">Grain</option>
             <!-- Add other categories as needed -->
         </select>
         <button type="button" onclick="addIngredient()">Add</button>
