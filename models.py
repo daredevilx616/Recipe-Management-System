@@ -1,44 +1,43 @@
 from flask_sqlalchemy import SQLAlchemy
+from flask_login import UserMixin
 
 db = SQLAlchemy()
 
-class Users(db.Model):
-    UserID = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    Username = db.Column(db.String(255), nullable=False)
-    Email = db.Column(db.String(255), unique=True, nullable=False)
-    Password = db.Column(db.String(255), nullable=False)
-    Preferences = db.Column(db.Text)
+class Users(db.Model, UserMixin):
+    user_id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(255), unique=True, nullable=False)
+    email = db.Column(db.String(255), unique=True, nullable=False)
+    password = db.Column(db.String(255), nullable=False)
+    preference = db.Column(db.Text)
+
+    recipes = db.relationship('Recipes', backref='user', lazy=True)
+    interactions = db.relationship('Interactions', backref='user', lazy=True)
 
 class Recipes(db.Model):
-    RecipeID = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    Title = db.Column(db.String(255), nullable=False)
-    Instructions = db.Column(db.Text, nullable=False)
-    Rating = db.Column(db.Numeric(2,1))  
-    UserID = db.Column(db.Integer, db.ForeignKey('users.UserID'))
+    recipe_id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(255), nullable=False)
+    instructions = db.Column(db.Text, nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
 
-    user = db.relationship('Users', backref=db.backref('recipes', lazy=True))
+    ingredients = db.relationship('Ingredients', secondary='recipe_ingredients', back_populates='recipes')
+    interactions = db.relationship('Interactions', backref='recipe', lazy=True)
 
 class Ingredients(db.Model):
-    IngredientID = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    Name = db.Column(db.String(255), nullable=False)
-    Category = db.Column(db.String(255))
-    Nutritional_Value = db.Column(db.Text)
+    ingredient_id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(255), nullable=False)
+    category = db.Column(db.String(255))
+    nutritional_value = db.Column(db.Text)
 
-class RecipeIngredients(db.Model):
-    RecipeID = db.Column(db.Integer, db.ForeignKey('recipes.RecipeID'), primary_key=True)
-    IngredientID = db.Column(db.Integer, db.ForeignKey('ingredients.IngredientID'), primary_key=True)
+    recipes = db.relationship('Recipes', secondary='recipe_ingredients', back_populates='ingredients')
 
-    recipe = db.relationship('Recipes', backref=db.backref('recipe_ingredients', lazy=True))
-    ingredient = db.relationship('Ingredients', backref=db.backref('recipe_ingredients', lazy=True))
+recipe_ingredients = db.Table('recipe_ingredients',
+    db.Column('recipe_id', db.Integer, db.ForeignKey('recipes.recipe_id'), primary_key=True),
+    db.Column('ingredient_id', db.Integer, db.ForeignKey('ingredients.ingredient_id'), primary_key=True)
+)
 
 class Interactions(db.Model):
-    InteractionID = db.Column(db.Integer, primary_key=True, autoincrement=True)
-    UserID = db.Column(db.Integer, db.ForeignKey('users.UserID'))
-    RecipeID = db.Column(db.Integer, db.ForeignKey('recipes.RecipeID'))
-    Rating = db.Column(db.Integer) 
-    Comment = db.Column(db.Text)
-    __table_args__ = (
-        db.CheckConstraint('Rating BETWEEN 1 AND 5', name='rating_range_check'),
-    )
-    user = db.relationship('Users', backref=db.backref('interactions', lazy=True))
-    recipe = db.relationship('Recipes', backref=db.backref('interactions', lazy=True))
+    interaction_id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
+    recipe_id = db.Column(db.Integer, db.ForeignKey('recipes.recipe_id'))
+    rating = db.Column(db.Integer, db.CheckConstraint('rating BETWEEN 1 AND 5'))
+    comment = db.Column(db.Text)

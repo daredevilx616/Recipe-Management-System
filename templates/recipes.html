@@ -1,11 +1,31 @@
 {% extends "base.html" %}
-
 {% block content %}
     <h1>Recipes</h1>
-    <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchRecipes()">
-    <ul id="recipeList">
+    <div id="recipe-search">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search recipes..." onkeyup="searchRecipes()">
+    </div>
+    <div id="recipe-list">
         {% for recipe in recipes %}
-            <li>{{ recipe.Title }}</li>
+            <div class="recipe-item" onclick="toggleRecipeDetails('details-{{ recipe.recipe_id }}')">
+                <div class="recipe-content">
+                    <div class="recipe-title">{{ recipe.title }}</div>
+                    <div class="recipe-details" id="details-{{ recipe.recipe_id }}" style="display: none;">
+                        <p><strong>Instructions:</strong> {{ recipe.instructions }}</p>
+                        <p><strong>Ingredients:</strong> 
+                            <span>
+                                {{ recipe.ingredients | map(attribute='name') | join(', ') }}
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="recipe-actions">
+                    <form action="/delete_recipe/{{ recipe.recipe_id }}" method="post" onsubmit="return confirm('Are you sure you want to delete this recipe?');">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Delete
+                        </button>
+                    </form>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}

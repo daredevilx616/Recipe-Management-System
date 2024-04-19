@@ -30,6 +30,7 @@ header a {
 }
 
 /* Navigation bar styling */
+
 nav {
     text-align: right;
     padding: 0;
@@ -133,4 +134,129 @@ input[type="submit"]:hover, button:hover {
     select { /* Select element styling */
         width: 100%;
     }
+}
+fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+input[type=checkbox] {
+    margin-right: 5px;
+}
+#recipe-search {
+    margin-bottom: 20px;
+}
+
+#recipe-list {
+    border: 1px solid #ddd;
+    padding: 0;
+}
+
+.recipe-item {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.recipe-item:last-child {
+    border-bottom: none;
+}
+
+.recipe-item button {
+    background: none;
+    border: none;
+    text-align: left;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #007bff; /* Bootstrap primary color */
+}
+
+.recipe-item button:focus {
+    outline: none;
+}
+
+.recipe-item .recipe-details {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.recipe-item .recipe-details ul {
+    padding-left: 20px;
+}
+
+.recipe-item:hover {
+    background-color: #f0f0f0;
+}
+#recipe-list {
+    margin-top: 20px;
+}
+
+.recipe-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.recipe-item:hover {
+    background-color: #e2e6ea;
+}
+
+.recipe-content {
+    flex-grow: 1;
+}
+
+.recipe-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.recipe-details {
+    padding-top: 10px;
+    display: none; /* Hidden by default */
+}
+
+.recipe-actions form {
+    margin: 0;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #dc3545;
+    outline: none;
+}
+
+.delete-btn:focus {
+    outline: none;
+}
+
+.delete-btn i {
+    font-size: 1.2rem;
+}
+.delete-icon {
+    cursor: pointer;
+    padding: 0 5px;
+    color: #c00; /* Red color for delete icon */
+}
+
+.ingredient-item {
+    display: flex;
+    align-items: center;
 }

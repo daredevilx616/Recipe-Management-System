@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1>Add a Recipe</h1>
+    <form method="POST" action="{{ url_for('add_recipe') }}">
+        {{ form.hidden_tag() }}
+        {{ form.title.label }} {{ form.title() }}
+        {{ form.instructions.label }} {{ form.instructions() }}
+        <fieldset id="ingredients-fieldset">
+            <legend>Ingredients</legend>
+            {% for ingredient_id, ingredient_name in form.ingredients.choices %}
+                <div class="ingredient-item" id="ingredient-{{ ingredient_id }}">
+                    <input type="checkbox" name="ingredients" value="{{ ingredient_id }}">
+                    <label>{{ ingredient_name }}</label>
+                    <span class="delete-icon" onclick="deleteIngredient('ingredient-{{ ingredient_id }}')">&times;</span>
+                </div>
+            {% endfor %}
+        </fieldset>
+        <h3>Missing an ingredient?</h3>
+        <input type="text" id="new_ingredient_name" placeholder="Ingredient Name">
+        <select id="new_ingredient_category">
+            <option value="select a category">[select a category]</option>
+            <option value="Baking">Baking</option>
+            <option value="Vegetables">Vegetables</option>
+            <option value="Seasoning">Seasoning</option>
+            <option value="Meat">Meat</option>
+            <option value="Fruits">Fruits</option>
+            <!-- Add other categories as needed -->
+        </select>
+        <button type="button" onclick="addIngredient()">Add</button>
+
+        {{ form.submit() }}
+    </form>
+    
+    
+    
+{% endblock %}

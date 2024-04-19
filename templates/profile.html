@@ -5,9 +5,26 @@
     <h1>User Profile</h1>
     <form method="POST">
         {{ form.hidden_tag() }}
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" value="{{ user.Username }}" disabled>
-        <!-- Add more fields as necessary -->
-        <input type="submit" value="Update Profile">
+        <div class="form-group">
+            <label for="user_id">User ID</label>
+            <input type="text" id="user_id" value="{{ user.user_id }}" class="form-control" readonly>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            {{ form.username(class="form-control", required=True) }}
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            {{ form.email(class="form-control", readonly=True) }}
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            {{ form.password(class="form-control", required=True) }}
+        </div>
+        <div class="form-group">
+            <label for="preference">Preferences</label>
+            {{ form.preference(class="form-control") }}
+        </div>
+        <button type="submit" class="btn btn-primary">Update Profile</button>        
     </form>
 {% endblock %}
