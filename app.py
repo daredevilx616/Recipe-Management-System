@@ -175,6 +175,20 @@ def update_recipe(recipe_id):
     db.session.commit()
     return jsonify({'message': 'Recipe updated successfully'}), 200
 
+# @app.route('/get_ingredients/<recipe_id>')
+# def get_ingredients(recipe_id):
+#     recipe = Recipes.query.get(recipe_id)
+#     all_ingredients = Ingredients.query.all()
+#     ingredients_info = [
+#         {
+#             'ingredient_id': ing.ingredient_id, 
+#             'name': ing.name, 
+#             'included': ing.ingredient_id in [ingredient.ingredient_id for ingredient in recipe.ingredients]
+#         } 
+#         for ing in all_ingredients
+#     ]
+#     return jsonify(ingredients_info)
+
 
 if __name__ == '__main__':
     app.run(debug=True)

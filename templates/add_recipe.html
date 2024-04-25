@@ -15,25 +15,34 @@
                 </div>
             {% endfor %}
         </fieldset>
-        <h3>Missing an ingredient?</h3>
-        <input type="text" id="new_ingredient_name" placeholder="Ingredient Name">
-        <select id="new_ingredient_category">
-            <option value="select a category">[select a category]</option>
-            <option value="Baking">Baking</option>
-            <option value="Vegetables">Vegetables</option>
-            <option value="Seasoning">Seasoning</option>
-            <option value="Meat">Meat</option>
-            <option value="Fruits">Fruits</option>
-            <option value="Oil">Oil</option>
-            <option value="Herb">Herb</option>
-            <option value="Grain">Grain</option>
-            <!-- Add other categories as needed -->
-        </select>
-        <button type="button" onclick="addIngredient()">Add</button>
+        <div class="form-row">
+            <div class="col-md-12 mb-3">
+                <h3 class="missing-ingredient-header">Missing an ingredient?</h3>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="col-md-6 mb-3">
+                <div class="input-group">
+                    <input type="text" id="new_ingredient_name" class="form-control" placeholder="Ingredient Name">
+                    <select id="new_ingredient_category" class="custom-select">
+                        <option value="select a category">[select a category]</option>
+                        <option value="Baking">Baking</option>
+                        <option value="Vegetables">Vegetables</option>
+                        <option value="Seasoning">Seasoning</option>
+                        <option value="Meat">Meat</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Oil">Oil</option>
+                        <option value="Herb">Herb</option>
+                        <option value="Grain">Grain</option>
+                        <!-- Add other categories as needed -->
+                    </select>
+                    <div class="input-group-append">
+                        <button type="button" onclick="addIngredient()" class="btn-sm">Add</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         {{ form.submit() }}
     </form>
-    
-    
-    
 {% endblock %}

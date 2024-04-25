@@ -20,8 +20,8 @@ function toggleIngredientsSelection(toggle) {
     });
 }
 
-function toggleRecipeDetails(detailsId) {
-    var detailsElement = document.getElementById(detailsId);
+function toggleRecipeDetails(recipeId) {
+    const detailsElement = document.getElementById(recipeId);
     if (detailsElement.style.display === 'none') {
         detailsElement.style.display = 'block';
     } else {
@@ -81,6 +81,7 @@ function addIngredient() {
         console.error('Error:', error);
     });
 }
+
 function deleteIngredient(ingredientId) {
     var ingredientElement = document.getElementById(ingredientId);
     var ingredientValue = ingredientElement.querySelector('input[type="checkbox"]').value;
@@ -158,3 +159,38 @@ function cancelEdit(recipeId) {
     // Reload the page or re-fetch the recipe details to cancel the edit
     window.location.reload();
 }
+
+// function loadIngredients(recipeId) {
+//     fetch(`/get_ingredients/${recipeId}`)
+//     .then(response => response.json())
+//     .then(ingredients => {
+//         const ingredientsFieldset = document.getElementById('ingredients-fieldset');
+//         ingredientsFieldset.innerHTML = ''; // Clear existing options
+//         ingredients.forEach(ingredient => {
+//             const ingredientDiv = document.createElement('div');
+//             ingredientDiv.className = 'ingredient-item';
+//             ingredientDiv.id = `ingredient-${ingredient.ingredient_id}`;
+
+//             const checkbox = document.createElement('input');
+//             checkbox.type = 'checkbox';
+//             checkbox.name = 'ingredients';
+//             checkbox.value = ingredient.ingredient_id;
+//             checkbox.checked = ingredient.included; // Set based on if it's included in the recipe
+
+//             const label = document.createElement('label');
+//             label.textContent = ingredient.name;
+
+//             const deleteSpan = document.createElement('span');
+//             deleteSpan.className = 'delete-icon';
+//             deleteSpan.textContent = '×';
+//             deleteSpan.onclick = () => deleteIngredient(`ingredient-${ingredient.ingredient_id}`);
+
+//             ingredientDiv.appendChild(checkbox);
+//             ingredientDiv.appendChild(label);
+//             ingredientDiv.appendChild(deleteSpan);
+
+//             ingredientsFieldset.appendChild(ingredientDiv);
+//         });
+//     })
+//     .catch(error => console.error('Error loading ingredients:', error));
+// }
